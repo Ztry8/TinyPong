@@ -28,7 +28,7 @@ void update(void) {
     ball_x += dir_x; ball_y += dir_y;
 
     static unsigned char score1 = 0, score2 = 0;
-    if (ball_y > SCREEN_SIZE || ball_y < 0) dir_y *= -1;
+    if (ball_y > SCREEN_SIZE || ball_y < 0) tone(2000, 5, 100, TONE_PULSE1), dir_y *= -1;
     if (ball_x < 0 || ball_x > SCREEN_SIZE) {
         ball_x = SCREEN_SIZE/2; ball_y = SCREEN_SIZE/2;
         tone(1000, 5, 100, TONE_PULSE1);
