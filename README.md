@@ -10,5 +10,7 @@ To compile, you need: [WASI_SDK](https://github.com/WebAssembly/wasi-sdk) [make]
 git clone https://github.com/Ztry8/TinyPong
 cd TinyPong
 make
-w4 run build/cart.wasm
+cd build
+w4 bundle cart.wasm --title "TinyPong" --html index.html
 ```
+Then, open index.html
