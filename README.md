@@ -1,5 +1,5 @@
 # TinyPong
-### Tiny ping pong game, just 942 bytes and 50 lines of code! 
+### Tiny ping pong game, just 942 bytes and 50 lines of code! [Play!](https://wasm4.org/play/tinypong)
 ![video](https://github.com/Ztry8/TinyPong/blob/main/assets/video.gif)  
 
 The game is written in C99 using the [WASM-4](https://main--wasm4.netlify.app/).  
