@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "wasm4.h"
 #define WIDTH 5
 #define HEIGHT 15
@@ -24,7 +25,7 @@ void update(void) {
     y2 = ball_y;
 
     char dir_now = paddles_collision(y1, y2, ball_x, ball_y);
-    if (dir_now != 0) dir_x = dir_now, tone(2000, 5, 100, TONE_PULSE1), dir_y = dir_now*-1;
+    if (dir_now) dir_x = dir_now, tone(2000, 5, 100, TONE_PULSE1), dir_y = dir_now * (rand()%2 ? -1 : 1);
     ball_x += dir_x; ball_y += dir_y;
 
     static unsigned char score1 = 0, score2 = 0;
