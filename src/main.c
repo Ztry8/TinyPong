@@ -18,7 +18,7 @@ char paddles_collision(short y1, short y2, short ball_x, short ball_y) {
 
 void update(void) {
     static short ball_x = SCREEN_SIZE/2, ball_y = SCREEN_SIZE/2, dir_x = 1, dir_y = 1, y1 = SCREEN_SIZE/2, y2 = SCREEN_SIZE/2;
-    unsigned char gamepad1 = *GAMEPAD1, gamepad2 = *GAMEPAD2;
+    unsigned char gamepad1 = *GAMEPAD1;
 
     if (gamepad1 & BUTTON_UP && y1 > 0) y1 -= 2;
     else if (gamepad1 & BUTTON_DOWN && y1+HEIGHT < SCREEN_SIZE) y1 += 2;
